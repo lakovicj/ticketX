@@ -32,6 +32,9 @@ public class Comment implements Serializable {
 	@Column
 	private int evaluation;
 	
+	@Column
+	private boolean active;
+	
 	public Comment() {
 		
 	}
@@ -74,6 +77,14 @@ public class Comment implements Serializable {
 
 	public void setEvaluation(int evaluation) {
 		this.evaluation = evaluation;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	
 	

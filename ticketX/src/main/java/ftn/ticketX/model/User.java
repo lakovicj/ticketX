@@ -50,13 +50,16 @@ public abstract class User implements Serializable {
 	@Enumerated
 	private UserRole userRole;
 	
+	@Column
+	private boolean active;
+	
 	
 	public User() {
 		
 	}
 	
 	public User(String username, String password, String firstName, String lastName, Gender gender,
-			LocalDate birthdate, UserRole userRole) {
+			LocalDate birthdate, UserRole userRole, boolean active) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -65,6 +68,7 @@ public abstract class User implements Serializable {
 		this.gender = gender;
 		this.birthdate = birthdate;
 		this.userRole = userRole;
+		this.active = active;
 	}
 	
 	
@@ -130,6 +134,14 @@ public abstract class User implements Serializable {
 
 	public void setUserRole(UserRole userRole) {
 		this.userRole = userRole;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	
 	

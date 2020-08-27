@@ -39,6 +39,9 @@ public class Ticket implements Serializable {
 	@Column
 	private boolean reservedStatus;
 	
+	@Column
+	private boolean active;
+	
 	
 	public Ticket() {
 		
@@ -99,6 +102,23 @@ public class Ticket implements Serializable {
 
 	public void setReservedStatus(boolean reservedStatus) {
 		this.reservedStatus = reservedStatus;
+	}
+	
+	
+
+
+	public boolean isActive() {
+		return active;
+	}
+
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+
+	public boolean isReservedStatus() {
+		return reservedStatus;
 	}
 
 

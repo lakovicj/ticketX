@@ -27,6 +27,10 @@ public class Location implements Serializable {
 	@OneToOne
 	private Address address;
 	
+	@Column
+	private boolean active;
+	
+	
 	public Location() {
 		
 	}
@@ -61,6 +65,14 @@ public class Location implements Serializable {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	
 	

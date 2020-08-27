@@ -19,7 +19,7 @@ public class Seller extends User {
 	private static final long serialVersionUID = 1272192053727743047L;
 	
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "manifestation_id")
+	@JoinColumn(name = "seller_id")
 	private List<Manifestation> manifestations;
 
 	
@@ -29,8 +29,8 @@ public class Seller extends User {
 	
 	
 	public Seller(String username, String password, String firstName, String lastName, Gender gender,
-			LocalDate birthdate, UserRole userRole) {
-		super(username, password, firstName, lastName, gender, birthdate, userRole);
+			LocalDate birthdate, UserRole userRole, boolean active) {
+		super(username, password, firstName, lastName, gender, birthdate, userRole, active);
 	}
 
 	public List<Manifestation> getManifestations() {

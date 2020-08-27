@@ -20,8 +20,8 @@ public class Administrator extends User {
 	}
 	
 	public Administrator(String username, String password, String firstName, String lastName, Gender gender,
-			LocalDate birthdate, UserRole userRole) {
-		super(username, password, firstName, lastName, gender, birthdate, userRole);
+			LocalDate birthdate, UserRole userRole, boolean active) {
+		super(username, password, firstName, lastName, gender, birthdate, userRole, active);
 		// TODO Auto-generated constructor stub
 	}
 
